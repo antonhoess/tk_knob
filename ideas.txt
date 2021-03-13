@@ -1,0 +1,20 @@
+* Canvas with gets enforced to be quadratic?
+* The element is always round as a circle.
+* Design elements can be defined be a combination of fixed arguments and kwargs which get passed to the internal tkinter.Canvas object.
+* Think of applying styles...? How to define/implement a style? Happens everything in the drawing method? They have access to several attributes like size, current_angle, value, etc. Allow define some variables like the radius of the knob to use relative sizes e.g. for the marker? Define the order of commands to define layers of drawing are the fixes elements which cannot be defined by the style?)? Define the styles in which format? YAML?
+* There is a default design.
++ Word with radius'. Radius 1 ist 1/2 of the width respectively height of the tkinter.Canvas. Needs to be greater > 0 and <= 1
+
+* Different methods on how to interpret the mouse position/movement to change its values. Either depending in the angle (absolut or relative to the last angle), or by horizontal or vertical movement and in the latter case define a "speed" factor.
+
+* Make sure that the internally used events have no influence whatsoever to the outside world and that they never get unbound (without internally rebinding them directly again). Or better: handle everything yourself overloading all *bind* methods.
+
+* In many places: Now we only check the case that the left limit is lower than the right limit... maybe expand it to the other case, too. but how to know the direction when (at least) one limit it None.
+
+* Convert everything internally back from degrees to radians.
+
+* Add several arguments of __init__ as properties
+
+* Add complete documentation.
+
++ Add some controls to the Testing GUI that allows to change some settings. E.g. turn_type=Knob.TurnType.ANGLE / vs. HORIZONTAL vs VERTICAL; or the style (when implemented)

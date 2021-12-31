@@ -18,3 +18,5 @@
 * Add complete documentation.
 
 + Add some controls to the Testing GUI that allows to change some settings. E.g. turn_type=Knob.TurnType.ANGLE / vs. HORIZONTAL vs VERTICAL; or the style (when implemented)
+
+* In the test program create a grid with different settings/styles and one of them which can be played with / modified?
